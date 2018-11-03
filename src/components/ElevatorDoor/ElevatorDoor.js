@@ -38,9 +38,6 @@ class ElevatorDoor extends Component {
             }
           />
         </div>
-
-        {/* <b>{this.state.currentFloor}</b> */}
-        {/* <h1> Current Floor: </h1> */}
       </div>
     );
   }

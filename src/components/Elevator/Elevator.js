@@ -8,16 +8,29 @@ class Elevator extends Component {
     super();
     this.state = {
       currentFloor: 1,
-      floors: [0, 1, 2, 3, 4, 5]
+      floors: [0, 1, 2, 3, 4, 5],
+      message: ""
     };
     this.floorHandler = this.floorHandler.bind(this);
+    this.emergencyMessage = this.emergencyMessage.bind(this);
   }
 
-  floorHandler(num) {
-    this.setState({
-      currentFloor: num
-    });
-    console.log(this.state.doorOpen);
+  floorHandler(destinationFloor) {
+    if (destinationFloor === this.state.currentFloor) {
+      console.log("You are already on that floor!");
+    } else if (destinationFloor > this.state.currentFloor) {
+      this.setState({ currentFloor: destinationFloor }, () =>
+        console.log(this.state.currentFloor)
+      );
+    } else if (destinationFloor < this.state.currentFloor) {
+      this.setState({ currentFloor: destinationFloor }, () =>
+        console.log(this.state.currentFloor)
+      );
+    }
+  }
+
+  emergencyMessage() {
+    console.log("The police have been notified! Remain calm");
   }
 
   render() {
@@ -39,6 +52,7 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(5)}
             >
               5
             </Button>
@@ -46,6 +60,7 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(4)}
             >
               4
             </Button>
@@ -53,6 +68,7 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(3)}
             >
               3
             </Button>
@@ -60,6 +76,7 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(2)}
             >
               2
             </Button>
@@ -67,6 +84,7 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(1)}
             >
               1
             </Button>
@@ -74,8 +92,17 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
+              onClick={() => this.floorHandler(0)}
             >
               0
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%", backgroundColor: "red" }}
+              onClick={() => this.emergencyMessage()}
+            >
+              EMERGENCY
             </Button>
           </div>
         </div>
