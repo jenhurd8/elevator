@@ -1,3 +1,6 @@
+/* sliding door effect referenced from 
+https://codepen.io/samarkandiy/pen/EFyzB */
+
 .elevatorDoor__container {
   display: flex;
   flex-direction: row;
@@ -5,7 +8,8 @@
   justify-content: center;
 }
 .elevatorDoor__elevator div {
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
+  background-image: url("https://images.unsplash.com/photo-1519317245869-d6943e4a4f9a?ixlib=rb-0.3.5&s=3de9d0fa8ba424f30047879aa6035794&auto=format&fit=crop&w=1350&q=80");
   height: 60vh;
   width: 40vw;
   overflow: hidden;
@@ -23,12 +27,13 @@
 }
 .elevatorDoor__doorClosed {
   border-left: solid 0px gray;
+  /* border-image: url("https://images.unsplash.com/photo-1488467316657-b812f9f0aa19?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70a5d021e2813d1abd0e31f49ed4cbae&auto=format&fit=crop&w=1350&q=80"); */
 }
 .elevatorDoor__controls {
   background-color: lightslategray;
-  height: 10vh;
-  width: 10vw;
-  font-style: bold;
+  height: 30vh;
+  width: 15vw;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-direction: column;
 }

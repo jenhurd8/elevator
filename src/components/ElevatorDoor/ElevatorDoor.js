@@ -31,8 +31,15 @@ class ElevatorDoor extends Component {
           />
         </div>
         <div className="elevatorDoor__controls">
-          <button onClick={this.doorHandler}>Status</button>
-          Current Floor: {this.state.currentFloor}
+          <button onClick={this.doorHandler}>Open/Close Door</button>
+
+          <b>{this.state.currentFloor}</b>
+          <h1> Current Floor: </h1>
+          <button>Floor 1</button>
+          <button>Floor 2</button>
+          <button>Floor 3</button>
+          <button>Floor 4</button>
+          <button>Floor 5</button>
         </div>
       </div>
     );

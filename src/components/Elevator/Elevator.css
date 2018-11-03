@@ -1,9 +1,8 @@
-/* sliding door effect referenced from https://codepen.io/samarkandiy/pen/EFyzB */
-
 .elevator__parentContainer {
   height: 100vh;
   width: 100vw;
   background-color: lavender;
+  background-image: url("https://images.unsplash.com/photo-1532210317995-cc56d90177d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5de975ffb8d5a1ab37693a34792bf6d6&auto=format&fit=crop&w=1350&q=80");
   display: flex;
   flex-direction: column;
 }
@@ -15,4 +14,5 @@
   width: 100vw;
   height: 10vh;
   background-color: darkgray;
+  background-image: url("https://images.unsplash.com/photo-1514388614019-c755c395185c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52ee84aaf0d189ef9efa9a80ae411457&auto=format&fit=crop&w=1350&q=80");
 }
