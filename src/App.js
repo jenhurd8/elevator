@@ -1,3 +1,4 @@
+import "../src/Reset.css";
 import React, { Component } from "react";
 import Elevator from "./components/Elevator/Elevator";
 import "./App.css";

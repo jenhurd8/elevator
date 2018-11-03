@@ -7,12 +7,24 @@
   flex-direction: column;
 }
 .elevator__spaceOverElevator {
-  margin-top: 30vh;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+}
+.elevator__elevator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 65vh;
 }
 
 .elevator__floor {
   width: 100vw;
   height: 10vh;
-  background-color: darkgray;
+  /* background-color: darkgray; */
   background-image: url("https://images.unsplash.com/photo-1514388614019-c755c395185c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52ee84aaf0d189ef9efa9a80ae411457&auto=format&fit=crop&w=1350&q=80");
+}
+#elevator__currentFloor {
+  font-size: x-large;
+  padding-top: 10vh;
 }

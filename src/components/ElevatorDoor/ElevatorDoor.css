@@ -10,7 +10,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
 .elevatorDoor__elevator div {
   /* background-color: lightgoldenrodyellow; */
   background-image: url("https://images.unsplash.com/photo-1519317245869-d6943e4a4f9a?ixlib=rb-0.3.5&s=3de9d0fa8ba424f30047879aa6035794&auto=format&fit=crop&w=1350&q=80");
-  height: 60vh;
+  height: 65vh;
   width: 40vw;
   overflow: hidden;
   position: relative;
@@ -21,7 +21,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   flex-direction: row;
 }
 .elevatorDoor__doorOpen {
-  height: 60vh;
+  height: 65vh;
   width: 40vw;
   border-left: solid 40vw gray;
 }
