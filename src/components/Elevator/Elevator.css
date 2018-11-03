@@ -1,0 +1,18 @@
+/* sliding door effect referenced from https://codepen.io/samarkandiy/pen/EFyzB */
+
+.elevator__parentContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+}
+.elevator__spaceOverElevator {
+  margin-top: 30vh;
+}
+
+.elevator__floor {
+  width: 100vw;
+  height: 10vh;
+  background-color: darkgray;
+}

@@ -1,0 +1,34 @@
+.elevatorDoor__container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.elevatorDoor__elevator div {
+  background-color: lightgoldenrodyellow;
+  height: 60vh;
+  width: 40vw;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  transition: border 0.7s ease;
+  display: flex;
+  flex-direction: row;
+}
+.elevatorDoor__doorOpen {
+  height: 60vh;
+  width: 40vw;
+  border-left: solid 40vw gray;
+}
+.elevatorDoor__doorClosed {
+  border-left: solid 0px gray;
+}
+.elevatorDoor__controls {
+  background-color: lightslategray;
+  height: 10vh;
+  width: 10vw;
+  font-style: bold;
+  display: flex;
+  justify-content: flex-end;
+}
