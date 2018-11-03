@@ -6,6 +6,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  /* height: 10%; */
 }
 .elevatorDoor__elevator div {
   /* background-color: lightgoldenrodyellow; */

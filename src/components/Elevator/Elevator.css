@@ -27,4 +27,9 @@
 #elevator__currentFloor {
   font-size: x-large;
   padding-top: 10vh;
+  text-emphasis: italic;
+}
+.elevator__controls {
+  display: flex;
+  flex-direction: column;
 }

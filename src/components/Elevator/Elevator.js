@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import ElevatorDoor from "../ElevatorDoor/ElevatorDoor";
 import "./Elevator.css";
+import Button from "@material-ui/core/Button";
 
 class Elevator extends Component {
   constructor() {
     super();
     this.state = {
-      currentFloor: 1
+      currentFloor: 1,
+      floors: [0, 1, 2, 3, 4, 5]
     };
     this.floorHandler = this.floorHandler.bind(this);
   }
@@ -23,22 +25,58 @@ class Elevator extends Component {
       <div className="elevator__parentContainer">
         <div className="elevator__spaceOverElevator">
           <div id="elevator__currentFloor">
-            Current Floor: {this.state.currentFloor}
+            <i>Current Floor: {this.state.currentFloor}</i>
           </div>
         </div>
 
         <div className="elevator__elevator">
           <ElevatorDoor />
-          <div className="elevatorDoor__controls">
+          <div className="elevator__controls">
             <div id="elevator__currentFloorNumber">
-              Current Floor: {this.state.currentFloor}
+              <i>Current Floor: {this.state.currentFloor}</i>
             </div>
-            <button>Floor 5</button>
-            <button>Floor 4</button>
-            <button>Floor 3</button>
-            <button>Floor 2</button>
-            <button>Floor 1</button>
-            <button>Basement</button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              5
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              4
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              3
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              2
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              1
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%" }}
+            >
+              0
+            </Button>
           </div>
         </div>
 
