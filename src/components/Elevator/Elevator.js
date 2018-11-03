@@ -13,6 +13,7 @@ class Elevator extends Component {
     };
     this.floorHandler = this.floorHandler.bind(this);
     this.emergencyMessage = this.emergencyMessage.bind(this);
+    this.emergencyResolved = this.emergencyResolved.bind(this);
   }
 
   floorHandler(destinationFloor) {
@@ -30,6 +31,16 @@ class Elevator extends Component {
   }
 
   emergencyMessage() {
+    this.setState({
+      message: "The police have been notified! Remain calm"
+    });
+    console.log("The police have been notified! Remain calm");
+  }
+
+  emergencyResolved() {
+    this.setState({
+      message: ""
+    });
     console.log("The police have been notified! Remain calm");
   }
 
@@ -38,6 +49,7 @@ class Elevator extends Component {
       <div className="elevator__parentContainer">
         <div className="elevator__spaceOverElevator">
           <div id="elevator__currentFloor">
+            <h3>{this.state.message}</h3>
             <i>Current Floor: {this.state.currentFloor}</i>
           </div>
         </div>
@@ -103,6 +115,14 @@ class Elevator extends Component {
               onClick={() => this.emergencyMessage()}
             >
               EMERGENCY
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              style={{ borderRadius: "50%", backgroundColor: "green" }}
+              onClick={() => this.emergencyResolved()}
+            >
+              EMERGENCY RESOLVED
             </Button>
           </div>
         </div>
