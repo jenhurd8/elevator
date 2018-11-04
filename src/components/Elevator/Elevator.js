@@ -9,8 +9,7 @@ class Elevator extends Component {
     this.state = {
       currentFloor: 1,
       destinationFloor: 0,
-      message: "",
-      count: 0
+      message: ""
     };
     this.floorHandler = this.floorHandler.bind(this);
     this.floorHandler2 = this.floorHandler2.bind(this);
@@ -20,13 +19,17 @@ class Elevator extends Component {
     this.stopFunction = this.stopFunction.bind(this);
     this.setDestinationFloor = this.setDestinationFloor.bind(this);
   }
+
+  /*
+  * Site used to clarify setInterval/clearinterval
+  * https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553
+  */
   interval() {
-    setInterval(this.floorHandler2.bind(this), 1000);
+    this.timer = setInterval(this.floorHandler2.bind(this), 1000);
   }
 
   stopFunction() {
-    clearInterval(this.interval);
-    // clearInterval(this.myInterval);
+    clearInterval(this.timer);
   }
 
   floorHandler() {
@@ -39,12 +42,15 @@ class Elevator extends Component {
 
   floorHandler2() {
     if (this.state.currentFloor === this.state.destinationFloor) {
-      console.log("stop function 1");
+      this.setState({
+        message:
+          "You have arrived at your destination Floor: " +
+          this.state.destinationFloor
+      });
+
       this.stopFunction();
       return;
-    }
-    // console.log(this.state.currentFloor, this.state.destinationFloor);
-    else if (this.state.currentFloor < this.state.destinationFloor) {
+    } else if (this.state.currentFloor < this.state.destinationFloor) {
       this.setState({ currentFloor: this.state.currentFloor + 1 });
     } else {
       this.setState({ currentFloor: this.state.currentFloor - 1 });
@@ -78,10 +84,6 @@ class Elevator extends Component {
           <div className="elevator__controls">
             <div id="elevator__currentFloorNumber">
               <i>Current Floor: {this.state.currentFloor}</i>
-              <i>
-                Count
-                {this.state.count}
-              </i>
             </div>
             <Button
               variant="contained"
@@ -172,20 +174,6 @@ class Elevator extends Component {
       </div>
     );
   }
-  //setInterval
-  //clearInterval
-  // componentDidMount() {
-  //   this.myInterval = setInterval(() => {
-  //     this.setState(() => ({
-  //       count: this.state.count + 1
-  //     }));
-  //   }, 1000);
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.myInterval);
-  //   clearInterval(this.interval);
-  // }
 }
 
 export default Elevator;
