@@ -4,8 +4,8 @@ import "./Elevator.css";
 import Button from "@material-ui/core/Button";
 
 class Elevator extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentFloor: 1,
       destinationFloor: 0,
@@ -20,7 +20,7 @@ class Elevator extends Component {
     this.setDestinationFloor = this.setDestinationFloor.bind(this);
   }
 
-  /*
+  /* Note to self:
   * Site used to clarify setInterval/clearinterval
   * https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553
   */
@@ -47,13 +47,12 @@ class Elevator extends Component {
           "You have arrived at your destination Floor: " +
           this.state.destinationFloor
       });
-
       this.stopFunction();
       return;
     } else if (this.state.currentFloor < this.state.destinationFloor) {
-      this.setState({ currentFloor: this.state.currentFloor + 1 });
+      this.setState({ message: "", currentFloor: this.state.currentFloor + 1 });
     } else {
-      this.setState({ currentFloor: this.state.currentFloor - 1 });
+      this.setState({ message: "", currentFloor: this.state.currentFloor - 1 });
     }
   }
 
@@ -70,6 +69,9 @@ class Elevator extends Component {
   }
 
   render() {
+    const doorStatus = this.state.currentFloor === this.state.destinationFloor;
+    console.log(doorStatus);
+
     return (
       <div className="elevator__parentContainer">
         <div className="elevator__spaceOverElevator">
@@ -80,7 +82,7 @@ class Elevator extends Component {
         </div>
 
         <div className="elevator__elevator">
-          <ElevatorDoor />
+          <ElevatorDoor doorStatus={doorStatus} />
           <div className="elevator__controls">
             <div id="elevator__currentFloorNumber">
               <i>Current Floor: {this.state.currentFloor}</i>
@@ -151,10 +153,11 @@ class Elevator extends Component {
             >
               0
             </Button>
+            <br />
             <Button
               variant="contained"
               size="small"
-              style={{ borderRadius: "50%", backgroundColor: "red" }}
+              style={{ borderRadius: "10%", backgroundColor: "red" }}
               onClick={() => this.emergencyMessage()}
             >
               EMERGENCY
@@ -162,10 +165,10 @@ class Elevator extends Component {
             <Button
               variant="contained"
               size="small"
-              style={{ borderRadius: "50%", backgroundColor: "green" }}
+              style={{ borderRadius: "10%", backgroundColor: "green" }}
               onClick={() => this.resetMessage()}
             >
-              RESET
+              RESET MESSAGES
             </Button>
           </div>
         </div>

@@ -28,8 +28,10 @@
   font-size: x-large;
   padding-top: 10vh;
   text-emphasis: italic;
+  background-color: white;
 }
 .elevator__controls {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
