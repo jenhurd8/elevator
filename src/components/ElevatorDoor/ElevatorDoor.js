@@ -23,15 +23,23 @@ class ElevatorDoor extends Component {
 
     return (
       <div className="elevatorDoor__container">
-        {/* <Button
-          onClick={this.doorHandler}
-          variant="contained"
-          size="small"
-          style={{ borderRadius: "50%", height: "10vh" }}
+        <div
+          className={
+            this.props.currentFloor === 0
+              ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor0"
+              : this.props.currentFloor === 1
+                ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor1"
+                : this.props.currentFloor === 2
+                  ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor2"
+                  : this.props.currentFloor === 3
+                    ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor3"
+                    : this.props.currentFloor === 4
+                      ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor4"
+                      : this.props.currentFloor === 5
+                        ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor5"
+                        : "elevatorDoor__elevator"
+          }
         >
-          Open / Close
-        </Button> */}
-        <div className="elevatorDoor__elevator">
           <div
             className={
               this.props.doorStatus === true

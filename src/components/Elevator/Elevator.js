@@ -74,106 +74,117 @@ class Elevator extends Component {
 
     return (
       <div className="elevator__parentContainer">
-        <div className="elevator__spaceOverElevator">
-          <div id="elevator__currentFloor">
-            <h3>{this.state.message}</h3>
-            <i>Current Floor: {this.state.currentFloor}</i>
-          </div>
-        </div>
-
-        <div className="elevator__elevator">
-          <ElevatorDoor doorStatus={doorStatus} />
-          <div className="elevator__controls">
-            <div id="elevator__currentFloorNumber">
+        <div className="elevator__centeredElevatorAndControlsBox">
+          <div className="elevator__spaceOverElevator">
+            <div id="elevator__currentFloor">
+              <h3>{this.state.message}</h3>
               <i>Current Floor: {this.state.currentFloor}</i>
             </div>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(5);
-                this.floorHandler();
-              }}
-            >
-              5
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(4);
-                this.floorHandler();
-              }}
-            >
-              4
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(3);
-                this.floorHandler();
-              }}
-            >
-              3
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(2);
-                this.floorHandler();
-              }}
-            >
-              2
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(1);
-                this.floorHandler();
-              }}
-            >
-              1
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "50%" }}
-              onClick={() => {
-                this.setDestinationFloor(0);
-                this.floorHandler();
-              }}
-            >
-              0
-            </Button>
-            <br />
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "10%", backgroundColor: "red" }}
-              onClick={() => this.emergencyMessage()}
-            >
-              EMERGENCY
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              style={{ borderRadius: "10%", backgroundColor: "green" }}
-              onClick={() => this.resetMessage()}
-            >
-              RESET MESSAGES
-            </Button>
           </div>
-        </div>
 
-        <div className="elevator__floor" />
+          <div className="elevator__elevator">
+            <ElevatorDoor
+              doorStatus={doorStatus}
+              currentFloor={this.state.currentFloor}
+            />
+            <div className="elevator__controls">
+              <div id="elevator__currentFloorNumber">
+                <i>Current Floor: {this.state.currentFloor}</i>
+              </div>
+              <div id="elevator__numbers">
+                <div className="elevator__halfNumbers1">
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(5);
+                      this.floorHandler();
+                    }}
+                  >
+                    5
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(4);
+                      this.floorHandler();
+                    }}
+                  >
+                    4
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(3);
+                      this.floorHandler();
+                    }}
+                  >
+                    3
+                  </Button>
+                </div>
+                <div className="elevator__halfNumbers2">
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(2);
+                      this.floorHandler();
+                    }}
+                  >
+                    2
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(1);
+                      this.floorHandler();
+                    }}
+                  >
+                    1
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%" }}
+                    onClick={() => {
+                      this.setDestinationFloor(0);
+                      this.floorHandler();
+                    }}
+                  >
+                    0
+                  </Button>
+                </div>
+              </div>
+              <br />
+              <Button
+                variant="contained"
+                size="small"
+                style={{ borderRadius: "10%", backgroundColor: "red" }}
+                onClick={() => this.emergencyMessage()}
+              >
+                EMERGENCY
+              </Button>
+              <Button
+                variant="contained"
+                size="small"
+                style={{ borderRadius: "10%", backgroundColor: "green" }}
+                onClick={() => this.resetMessage()}
+              >
+                RESET MESSAGES
+              </Button>
+            </div>
+          </div>
+
+          {/* <div className="elevator__floor" /> */}
+        </div>
       </div>
     );
   }
