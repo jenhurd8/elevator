@@ -8,25 +8,46 @@ class Elevator extends Component {
     super();
     this.state = {
       currentFloor: 1,
-      floors: [0, 1, 2, 3, 4, 5],
-      message: ""
+      destinationFloor: 0,
+      message: "",
+      count: 0
     };
     this.floorHandler = this.floorHandler.bind(this);
+    this.floorHandler2 = this.floorHandler2.bind(this);
     this.emergencyMessage = this.emergencyMessage.bind(this);
-    this.emergencyResolved = this.emergencyResolved.bind(this);
+    this.resetMessage = this.resetMessage.bind(this);
+    this.interval = this.interval.bind(this);
+    this.stopFunction = this.stopFunction.bind(this);
+    this.setDestinationFloor = this.setDestinationFloor.bind(this);
+  }
+  interval() {
+    setInterval(this.floorHandler2.bind(this), 1000);
   }
 
-  floorHandler(destinationFloor) {
-    if (destinationFloor === this.state.currentFloor) {
-      console.log("You are already on that floor!");
-    } else if (destinationFloor > this.state.currentFloor) {
-      this.setState({ currentFloor: destinationFloor }, () =>
-        console.log(this.state.currentFloor)
-      );
-    } else if (destinationFloor < this.state.currentFloor) {
-      this.setState({ currentFloor: destinationFloor }, () =>
-        console.log(this.state.currentFloor)
-      );
+  stopFunction() {
+    clearInterval(this.interval);
+    // clearInterval(this.myInterval);
+  }
+
+  floorHandler() {
+    this.interval();
+  }
+
+  setDestinationFloor(des) {
+    this.setState({ destinationFloor: des });
+  }
+
+  floorHandler2() {
+    if (this.state.currentFloor === this.state.destinationFloor) {
+      console.log("stop function 1");
+      this.stopFunction();
+      return;
+    }
+    // console.log(this.state.currentFloor, this.state.destinationFloor);
+    else if (this.state.currentFloor < this.state.destinationFloor) {
+      this.setState({ currentFloor: this.state.currentFloor + 1 });
+    } else {
+      this.setState({ currentFloor: this.state.currentFloor - 1 });
     }
   }
 
@@ -34,14 +55,12 @@ class Elevator extends Component {
     this.setState({
       message: "The police have been notified! Remain calm"
     });
-    console.log("The police have been notified! Remain calm");
   }
 
-  emergencyResolved() {
+  resetMessage() {
     this.setState({
       message: ""
     });
-    console.log("The police have been notified! Remain calm");
   }
 
   render() {
@@ -59,12 +78,19 @@ class Elevator extends Component {
           <div className="elevator__controls">
             <div id="elevator__currentFloorNumber">
               <i>Current Floor: {this.state.currentFloor}</i>
+              <i>
+                Count
+                {this.state.count}
+              </i>
             </div>
             <Button
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(5)}
+              onClick={() => {
+                this.setDestinationFloor(5);
+                this.floorHandler();
+              }}
             >
               5
             </Button>
@@ -72,7 +98,10 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(4)}
+              onClick={() => {
+                this.setDestinationFloor(4);
+                this.floorHandler();
+              }}
             >
               4
             </Button>
@@ -80,7 +109,10 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(3)}
+              onClick={() => {
+                this.setDestinationFloor(3);
+                this.floorHandler();
+              }}
             >
               3
             </Button>
@@ -88,7 +120,10 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(2)}
+              onClick={() => {
+                this.setDestinationFloor(2);
+                this.floorHandler();
+              }}
             >
               2
             </Button>
@@ -96,7 +131,10 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(1)}
+              onClick={() => {
+                this.setDestinationFloor(1);
+                this.floorHandler();
+              }}
             >
               1
             </Button>
@@ -104,7 +142,10 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%" }}
-              onClick={() => this.floorHandler(0)}
+              onClick={() => {
+                this.setDestinationFloor(0);
+                this.floorHandler();
+              }}
             >
               0
             </Button>
@@ -120,9 +161,9 @@ class Elevator extends Component {
               variant="contained"
               size="small"
               style={{ borderRadius: "50%", backgroundColor: "green" }}
-              onClick={() => this.emergencyResolved()}
+              onClick={() => this.resetMessage()}
             >
-              EMERGENCY RESOLVED
+              RESET
             </Button>
           </div>
         </div>
@@ -131,6 +172,20 @@ class Elevator extends Component {
       </div>
     );
   }
+  //setInterval
+  //clearInterval
+  // componentDidMount() {
+  //   this.myInterval = setInterval(() => {
+  //     this.setState(() => ({
+  //       count: this.state.count + 1
+  //     }));
+  //   }, 1000);
+  // }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.myInterval);
+  //   clearInterval(this.interval);
+  // }
 }
 
 export default Elevator;
