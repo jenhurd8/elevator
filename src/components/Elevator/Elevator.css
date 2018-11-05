@@ -19,6 +19,10 @@
 h2 {
   color: red;
 }
+h3 {
+  display: flex;
+  justify-content: center;
+}
 .elevator__spaceOverElevator {
   height: 15vh;
   width: 75vw;
@@ -45,6 +49,9 @@ p {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  border: solid black 3px;
+  color: white;
+  background-color: black;
 }
 #elevator__currentFloor {
   font-size: x-large;

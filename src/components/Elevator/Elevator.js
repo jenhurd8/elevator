@@ -103,7 +103,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(2);
@@ -118,7 +120,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(1);
@@ -133,7 +137,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(0);
@@ -150,7 +156,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(5);
@@ -165,7 +173,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(4);
@@ -180,7 +190,9 @@ class Elevator extends Component {
                     style={{
                       borderRadius: "50%",
                       padding: "20px",
-                      margin: "5px"
+                      margin: "5px",
+                      border: "solid black 1px",
+                      boxShadow: "5px 10px 5px black"
                     }}
                     onClick={() => {
                       this.setDestinationFloor(3);
@@ -198,7 +210,9 @@ class Elevator extends Component {
                 style={{
                   backgroundColor: "red",
                   padding: "5px",
-                  margin: "5px"
+                  margin: "5px",
+                  border: "solid black 1px",
+                  boxShadow: "5px 10px 5px black"
                 }}
                 onClick={() => this.emergencyMessage()}
               >
@@ -210,7 +224,9 @@ class Elevator extends Component {
                 style={{
                   backgroundColor: "green",
                   padding: "5px",
-                  margin: "5px"
+                  margin: "5px",
+                  border: "solid black 1px",
+                  boxShadow: "5px 10px 5px black"
                 }}
                 onClick={() => this.resetMessage()}
               >
