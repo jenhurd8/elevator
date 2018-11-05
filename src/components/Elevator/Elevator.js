@@ -72,7 +72,6 @@ class Elevator extends Component {
 
   render() {
     const doorStatus = this.state.currentFloor === this.state.destinationFloor;
-    console.log(doorStatus);
 
     return (
       <div className="elevator__parentContainer">

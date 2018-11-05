@@ -18,8 +18,6 @@ class ElevatorDoor extends Component {
   }
 
   render() {
-    console.log(this.props.doorStatus);
-
     return (
       <div className="elevatorDoor__container">
         <div
