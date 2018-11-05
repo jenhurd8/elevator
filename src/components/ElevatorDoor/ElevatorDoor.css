@@ -9,7 +9,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
 }
 
 .elevatorDoor__elevator div {
-  height: 45vh;
+  height: 55vh;
   width: 60vw;
   overflow: hidden;
   position: relative;
@@ -56,7 +56,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   background-size: cover;
 }
 .elevatorDoor__doorClosed {
-  height: 45vh;
+  height: 55vh;
   width: 60vw;
   border-left: solid 60vw gray;
 }
@@ -81,7 +81,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
     border-left: solid 0px gray;
   }
   to {
-    height: 45vh;
+    height: 55vh;
     width: 60vw;
     border-left: solid 60vw gray;
   }

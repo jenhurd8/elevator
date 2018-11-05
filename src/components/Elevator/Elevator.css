@@ -6,17 +6,16 @@
   justify-content: center;
   align-items: center;
   background-image: url("https://images.pexels.com/photos/1050305/pexels-photo-1050305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-
   background: #fff;
-
   border-style: solid;
   border-width: 25vw;
   border-top-color: black;
-  border-right-color: gray;
+  border-right-color: darkgray;
   border-bottom-color: black;
-  border-left-color: gray;
+  border-left-color: darkgray;
 }
 .elevator__centeredElevatorAndControlsBox {
+  box-shadow: 0px 0px 50px 40px black;
 }
 h2 {
   color: red;
@@ -37,7 +36,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 45vh;
+  height: 55vh;
   background-image: url("https://images.pexels.com/photos/1050305/pexels-photo-1050305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 .elevator__floorIndicator,
