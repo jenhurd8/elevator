@@ -197,7 +197,6 @@ class Elevator extends Component {
                 variant="contained"
                 size="small"
                 style={{
-                  borderRadius: "40%",
                   backgroundColor: "red",
                   padding: "5px",
                   margin: "5px"
@@ -210,7 +209,6 @@ class Elevator extends Component {
                 variant="contained"
                 size="small"
                 style={{
-                  borderRadius: "40%",
                   backgroundColor: "green",
                   padding: "5px",
                   margin: "5px"
