@@ -101,7 +101,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(2);
                       this.floorHandler();
@@ -112,7 +116,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(1);
                       this.floorHandler();
@@ -123,7 +131,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(0);
                       this.floorHandler();
@@ -136,7 +148,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(5);
                       this.floorHandler();
@@ -147,7 +163,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(4);
                       this.floorHandler();
@@ -158,7 +178,11 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%", padding: "20px" }}
+                    style={{
+                      borderRadius: "50%",
+                      padding: "20px",
+                      margin: "5px"
+                    }}
                     onClick={() => {
                       this.setDestinationFloor(3);
                       this.floorHandler();
@@ -175,7 +199,8 @@ class Elevator extends Component {
                 style={{
                   borderRadius: "40%",
                   backgroundColor: "red",
-                  padding: "5px"
+                  padding: "5px",
+                  margin: "5px"
                 }}
                 onClick={() => this.emergencyMessage()}
               >
@@ -187,7 +212,8 @@ class Elevator extends Component {
                 style={{
                   borderRadius: "40%",
                   backgroundColor: "green",
-                  padding: "5px"
+                  padding: "5px",
+                  margin: "5px"
                 }}
                 onClick={() => this.resetMessage()}
               >
