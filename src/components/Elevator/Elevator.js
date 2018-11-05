@@ -9,7 +9,8 @@ class Elevator extends Component {
     this.state = {
       currentFloor: 1,
       destinationFloor: 0,
-      message: ""
+      message: "",
+      emergencyMessage: ""
     };
     this.floorHandler = this.floorHandler.bind(this);
     this.floorHandler2 = this.floorHandler2.bind(this);
@@ -20,7 +21,7 @@ class Elevator extends Component {
     this.setDestinationFloor = this.setDestinationFloor.bind(this);
   }
 
-  /* Note to self:
+  /* 
   * Site used to clarify setInterval/clearinterval
   * https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553
   */
@@ -44,7 +45,7 @@ class Elevator extends Component {
     if (this.state.currentFloor === this.state.destinationFloor) {
       this.setState({
         message:
-          "You have arrived at your destination Floor: " +
+          "You have arrived at your destination! Floor: " +
           this.state.destinationFloor
       });
       this.stopFunction();
@@ -58,13 +59,14 @@ class Elevator extends Component {
 
   emergencyMessage() {
     this.setState({
-      message: "The police have been notified! Remain calm"
+      emergencyMessage: "The police have been notified! Remain calm"
     });
   }
 
   resetMessage() {
     this.setState({
-      message: ""
+      message: "",
+      emergencyMessage: ""
     });
   }
 
@@ -77,8 +79,8 @@ class Elevator extends Component {
         <div className="elevator__centeredElevatorAndControlsBox">
           <div className="elevator__spaceOverElevator">
             <div id="elevator__currentFloor">
+              <h2>{this.state.emergencyMessage}</h2>
               <h3>{this.state.message}</h3>
-              <i>Current Floor: {this.state.currentFloor}</i>
             </div>
           </div>
 
@@ -89,49 +91,17 @@ class Elevator extends Component {
             />
             <div className="elevator__controls">
               <div id="elevator__currentFloorNumber">
-                <i>Current Floor: {this.state.currentFloor}</i>
+                <div id="elevator__floorIndicator">
+                  <h3>Current Floor:</h3>
+                  <p>{this.state.currentFloor}</p>
+                </div>
               </div>
               <div id="elevator__numbers">
-                <div className="elevator__halfNumbers1">
-                  <Button
-                    variant="contained"
-                    size="small"
-                    style={{ borderRadius: "50%" }}
-                    onClick={() => {
-                      this.setDestinationFloor(5);
-                      this.floorHandler();
-                    }}
-                  >
-                    5
-                  </Button>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    style={{ borderRadius: "50%" }}
-                    onClick={() => {
-                      this.setDestinationFloor(4);
-                      this.floorHandler();
-                    }}
-                  >
-                    4
-                  </Button>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    style={{ borderRadius: "50%" }}
-                    onClick={() => {
-                      this.setDestinationFloor(3);
-                      this.floorHandler();
-                    }}
-                  >
-                    3
-                  </Button>
-                </div>
                 <div className="elevator__halfNumbers2">
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%" }}
+                    style={{ borderRadius: "50%", padding: "20px" }}
                     onClick={() => {
                       this.setDestinationFloor(2);
                       this.floorHandler();
@@ -142,7 +112,7 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%" }}
+                    style={{ borderRadius: "50%", padding: "20px" }}
                     onClick={() => {
                       this.setDestinationFloor(1);
                       this.floorHandler();
@@ -153,13 +123,48 @@ class Elevator extends Component {
                   <Button
                     variant="contained"
                     size="small"
-                    style={{ borderRadius: "50%" }}
+                    style={{ borderRadius: "50%", padding: "20px" }}
                     onClick={() => {
                       this.setDestinationFloor(0);
                       this.floorHandler();
                     }}
                   >
-                    0
+                    G0
+                  </Button>
+                </div>
+                <div className="elevator__halfNumbers1">
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%", padding: "20px" }}
+                    onClick={() => {
+                      this.setDestinationFloor(5);
+                      this.floorHandler();
+                    }}
+                  >
+                    5
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%", padding: "20px" }}
+                    onClick={() => {
+                      this.setDestinationFloor(4);
+                      this.floorHandler();
+                    }}
+                  >
+                    4
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{ borderRadius: "50%", padding: "20px" }}
+                    onClick={() => {
+                      this.setDestinationFloor(3);
+                      this.floorHandler();
+                    }}
+                  >
+                    3
                   </Button>
                 </div>
               </div>
@@ -167,7 +172,11 @@ class Elevator extends Component {
               <Button
                 variant="contained"
                 size="small"
-                style={{ borderRadius: "10%", backgroundColor: "red" }}
+                style={{
+                  borderRadius: "40%",
+                  backgroundColor: "red",
+                  padding: "5px"
+                }}
                 onClick={() => this.emergencyMessage()}
               >
                 EMERGENCY
@@ -175,15 +184,17 @@ class Elevator extends Component {
               <Button
                 variant="contained"
                 size="small"
-                style={{ borderRadius: "10%", backgroundColor: "green" }}
+                style={{
+                  borderRadius: "40%",
+                  backgroundColor: "green",
+                  padding: "5px"
+                }}
                 onClick={() => this.resetMessage()}
               >
                 RESET MESSAGES
               </Button>
             </div>
           </div>
-
-          {/* <div className="elevator__floor" /> */}
         </div>
       </div>
     );

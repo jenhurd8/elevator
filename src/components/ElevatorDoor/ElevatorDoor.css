@@ -9,7 +9,6 @@ https://codepen.io/samarkandiy/pen/EFyzB */
 }
 
 .elevatorDoor__elevator div {
-  /* background-image: url("https://images.unsplash.com/photo-1519317245869-d6943e4a4f9a?ixlib=rb-0.3.5&s=3de9d0fa8ba424f30047879aa6035794&auto=format&fit=crop&w=1350&q=80"); */
   height: 45vh;
   width: 60vw;
   overflow: hidden;
@@ -21,37 +20,37 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   flex-direction: row;
 }
 .elevatorDoor__elevatorFloor0 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1541309811/pexels-photo-260892_krodbp.jpg");
+  background-image: url("https://images.pexels.com/photos/6517/parking-multi-storey-car-park.jpg?cs=srgb&dl=multi-storey-car-park-parking-6517.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .elevatorDoor__elevatorFloor1 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1534895521/pexels-photo-311012_vrbhre.jpg");
+  background-image: url("https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?cs=srgb&dl=adults-airport-architecture-518244.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .elevatorDoor__elevatorFloor2 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1532364132/attractive-background-beautiful-756453_f6q7fk.jpg");
+  background-image: url("https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?cs=srgb&dl=chairs-computers-contemporary-1170412.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .elevatorDoor__elevatorFloor3 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1531409369/athlete-biceps-body-38630_sgvkhs.jpg");
+  background-image: url("https://images.pexels.com/photos/1181394/pexels-photo-1181394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .elevatorDoor__elevatorFloor4 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1528417323/bark-close-up-cute-34533_ydo8lr.jpg");
+  background-image: url("https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?cs=srgb&dl=architecture-ceiling-chairs-262047.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .elevatorDoor__elevatorFloor5 {
-  background-image: url("https://res.cloudinary.com/jjenjjenjjen/image/upload/v1499092566/JenniferLawrence_bh6xrr.png");
+  background-image: url("https://images.unsplash.com/photo-1534438097545-a2c22c57f2ad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d5af2c666d147efdc4e5b17045be8289&auto=format&fit=crop&w=1350&q=80");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -62,12 +61,12 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   border-left: solid 60vw gray;
 }
 .elevatorDoor__doorOpen {
-  border-left: solid 0px gray;
   animation: cssAnimation 0s ease-in 5s forwards;
-  /* border-image: url("https://images.unsplash.com/photo-1488467316657-b812f9f0aa19?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70a5d021e2813d1abd0e31f49ed4cbae&auto=format&fit=crop&w=1350&q=80"); */
+  background-image: url("https://images.pexels.com/photos/1050305/pexels-photo-1050305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    0px solid;
 }
 .elevatorDoor__controls {
-  background-color: lightslategray;
+  background-color: url("https://images.pexels.com/photos/1050305/pexels-photo-1050305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   height: 30vh;
   width: 15vw;
   display: flex;

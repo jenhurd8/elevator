@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./ElevatorDoor.css";
-// import Button from "@material-ui/core/Button";
 
 class ElevatorDoor extends Component {
   constructor() {
