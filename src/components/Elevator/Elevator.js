@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ElevatorDoor from "../ElevatorDoor/ElevatorDoor";
 import "./Elevator.css";
-import Button from "@material-ui/core/Button";
+import BaseButton from "../BaseButton/BaseButton";
+// import Button from "@material-ui/core/Button";
 
 class Elevator extends Component {
   constructor(props) {
@@ -97,24 +98,25 @@ class Elevator extends Component {
               </div>
               <div id="elevator__numbers">
                 <div className="elevator__halfNumbers2">
-                  <Button
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
+                  {/* <AButton>Test</AButton> */}
+                  <BaseButton
+                    // variant="contained"
+                    // size="small"
+                    // style={{
+                    //   borderRadius: "50%",
+                    //   padding: "20px",
+                    //   margin: "5px",
+                    //   border: "solid black 1px",
+                    //   boxShadow: "5px 10px 5px black"
+                    // }}
                     onClick={() => {
                       this.setDestinationFloor(2);
                       this.floorHandler();
                     }}
                   >
                     2
-                  </Button>
-                  <Button
+                  </BaseButton>
+                  <BaseButton
                     variant="contained"
                     size="small"
                     style={{
@@ -130,8 +132,8 @@ class Elevator extends Component {
                     }}
                   >
                     1
-                  </Button>
-                  <Button
+                  </BaseButton>
+                  <BaseButton
                     variant="contained"
                     size="small"
                     style={{
@@ -147,10 +149,10 @@ class Elevator extends Component {
                     }}
                   >
                     G0
-                  </Button>
+                  </BaseButton>
                 </div>
                 <div className="elevator__halfNumbers1">
-                  <Button
+                  <BaseButton
                     variant="contained"
                     size="small"
                     style={{
@@ -166,8 +168,8 @@ class Elevator extends Component {
                     }}
                   >
                     5
-                  </Button>
-                  <Button
+                  </BaseButton>
+                  <BaseButton
                     variant="contained"
                     size="small"
                     style={{
@@ -183,8 +185,8 @@ class Elevator extends Component {
                     }}
                   >
                     4
-                  </Button>
-                  <Button
+                  </BaseButton>
+                  <BaseButton
                     variant="contained"
                     size="small"
                     style={{
@@ -200,11 +202,11 @@ class Elevator extends Component {
                     }}
                   >
                     3
-                  </Button>
+                  </BaseButton>
                 </div>
               </div>
               <br />
-              <Button
+              <BaseButton
                 variant="contained"
                 size="small"
                 style={{
@@ -217,8 +219,8 @@ class Elevator extends Component {
                 onClick={() => this.emergencyMessage()}
               >
                 EMERGENCY
-              </Button>
-              <Button
+              </BaseButton>
+              <BaseButton
                 variant="contained"
                 size="small"
                 style={{
@@ -231,7 +233,7 @@ class Elevator extends Component {
                 onClick={() => this.resetMessage()}
               >
                 RESET MESSAGES
-              </Button>
+              </BaseButton>
             </div>
           </div>
         </div>
