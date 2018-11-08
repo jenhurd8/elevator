@@ -113,9 +113,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(2);
                       this.floorHandler();
                     }}
-                  >
-                    2
-                  </BaseButton>
+                    value={2}
+                  />
                   <BaseButton
                     variant="contained"
                     size="small"
@@ -130,9 +129,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(1);
                       this.floorHandler();
                     }}
-                  >
-                    1
-                  </BaseButton>
+                    value={1}
+                  />
                   <BaseButton
                     variant="contained"
                     size="small"
@@ -147,9 +145,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(0);
                       this.floorHandler();
                     }}
-                  >
-                    G0
-                  </BaseButton>
+                    value={"G0"}
+                  />
                 </div>
                 <div className="elevator__halfNumbers1">
                   <BaseButton
@@ -166,9 +163,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(5);
                       this.floorHandler();
                     }}
-                  >
-                    5
-                  </BaseButton>
+                    value={5}
+                  />
                   <BaseButton
                     variant="contained"
                     size="small"
@@ -183,9 +179,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(4);
                       this.floorHandler();
                     }}
-                  >
-                    4
-                  </BaseButton>
+                    value={4}
+                  />
                   <BaseButton
                     variant="contained"
                     size="small"
@@ -200,9 +195,8 @@ class Elevator extends Component {
                       this.setDestinationFloor(3);
                       this.floorHandler();
                     }}
-                  >
-                    3
-                  </BaseButton>
+                    value={3}
+                  />
                 </div>
               </div>
               <br />
@@ -217,9 +211,8 @@ class Elevator extends Component {
                   boxShadow: "5px 10px 5px black"
                 }}
                 onClick={() => this.emergencyMessage()}
-              >
-                EMERGENCY
-              </BaseButton>
+                value={"EMERGENCY"}
+              />
               <BaseButton
                 variant="contained"
                 size="small"
@@ -231,9 +224,8 @@ class Elevator extends Component {
                   boxShadow: "5px 10px 5px black"
                 }}
                 onClick={() => this.resetMessage()}
-              >
-                RESET MESSAGES
-              </BaseButton>
+                value={"RESET MESSAGES"}
+              />
             </div>
           </div>
         </div>

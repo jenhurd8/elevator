@@ -15,7 +15,9 @@ class BaseButton extends Component {
           boxShadow: "5px 10px 5px black"
         }}
         //   onClick={() => this.emergencyMessage()}
-      />
+      >
+        {this.props.value}
+      </Button>
     );
   }
 }
