@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ElevatorDoor from "../ElevatorDoor/ElevatorDoor";
 import "./Elevator.css";
 import BaseButton from "../BaseButton/BaseButton";
-// import Button from "@material-ui/core/Button";
 
 class Elevator extends Component {
   constructor(props) {
@@ -98,50 +97,22 @@ class Elevator extends Component {
               </div>
               <div id="elevator__numbers">
                 <div className="elevator__halfNumbers2">
-                  {/* <AButton>Test</AButton> */}
                   <BaseButton
-                    // variant="contained"
-                    // size="small"
-                    // style={{
-                    //   borderRadius: "50%",
-                    //   padding: "20px",
-                    //   margin: "5px",
-                    //   border: "solid black 1px",
-                    //   boxShadow: "5px 10px 5px black"
-                    // }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(2);
                       this.floorHandler();
                     }}
                     value={2}
                   />
                   <BaseButton
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(1);
                       this.floorHandler();
                     }}
                     value={1}
                   />
                   <BaseButton
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(0);
                       this.floorHandler();
                     }}
@@ -150,48 +121,21 @@ class Elevator extends Component {
                 </div>
                 <div className="elevator__halfNumbers1">
                   <BaseButton
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(5);
                       this.floorHandler();
                     }}
                     value={5}
                   />
                   <BaseButton
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(4);
                       this.floorHandler();
                     }}
                     value={4}
                   />
                   <BaseButton
-                    variant="contained"
-                    size="small"
-                    style={{
-                      borderRadius: "50%",
-                      padding: "20px",
-                      margin: "5px",
-                      border: "solid black 1px",
-                      boxShadow: "5px 10px 5px black"
-                    }}
-                    onClick={() => {
+                    clickAction={() => {
                       this.setDestinationFloor(3);
                       this.floorHandler();
                     }}
@@ -201,29 +145,13 @@ class Elevator extends Component {
               </div>
               <br />
               <BaseButton
-                variant="contained"
-                size="small"
-                style={{
-                  backgroundColor: "red",
-                  padding: "5px",
-                  margin: "5px",
-                  border: "solid black 1px",
-                  boxShadow: "5px 10px 5px black"
-                }}
-                onClick={() => this.emergencyMessage()}
+                color={"red"}
+                clickAction={() => this.emergencyMessage()}
                 value={"EMERGENCY"}
               />
               <BaseButton
-                variant="contained"
-                size="small"
-                style={{
-                  backgroundColor: "green",
-                  padding: "5px",
-                  margin: "5px",
-                  border: "solid black 1px",
-                  boxShadow: "5px 10px 5px black"
-                }}
-                onClick={() => this.resetMessage()}
+                color={"green"}
+                clickAction={() => this.resetMessage()}
                 value={"RESET MESSAGES"}
               />
             </div>

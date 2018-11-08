@@ -12,9 +12,10 @@ class BaseButton extends Component {
           padding: "20px",
           margin: "5px",
           border: "solid black 1px",
-          boxShadow: "5px 10px 5px black"
+          boxShadow: "5px 10px 5px black",
+          backgroundColor: this.props.color
         }}
-        //   onClick={() => this.emergencyMessage()}
+        onClick={this.props.clickAction}
       >
         {this.props.value}
       </Button>
