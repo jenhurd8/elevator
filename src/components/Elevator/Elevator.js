@@ -12,13 +12,6 @@ class Elevator extends Component {
       message: "",
       emergencyMessage: ""
     };
-    this.floorHandler = this.floorHandler.bind(this);
-    this.floorHandler2 = this.floorHandler2.bind(this);
-    this.emergencyMessage = this.emergencyMessage.bind(this);
-    this.resetMessage = this.resetMessage.bind(this);
-    this.interval = this.interval.bind(this);
-    this.stopFunction = this.stopFunction.bind(this);
-    this.setDestinationFloor = this.setDestinationFloor.bind(this);
   }
 
   /* 
