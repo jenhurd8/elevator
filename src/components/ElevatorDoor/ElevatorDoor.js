@@ -23,17 +23,17 @@ class ElevatorDoor extends Component {
         <div
           className={
             this.props.currentFloor === 0
-              ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor0"
+              ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor0 elevatorDoor__backgroundPosition"
               : this.props.currentFloor === 1
-                ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor1"
+                ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor1 elevatorDoor__backgroundPosition"
                 : this.props.currentFloor === 2
-                  ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor2"
+                  ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor2 elevatorDoor__backgroundPosition"
                   : this.props.currentFloor === 3
-                    ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor3"
+                    ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor3 elevatorDoor__backgroundPosition"
                     : this.props.currentFloor === 4
-                      ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor4"
+                      ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor4 elevatorDoor__backgroundPosition"
                       : this.props.currentFloor === 5
-                        ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor5"
+                        ? "elevatorDoor__elevator div elevatorDoor__elevatorFloor5 elevatorDoor__backgroundPosition"
                         : "elevatorDoor__elevator"
           }
         >
