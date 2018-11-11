@@ -141,11 +141,13 @@ class Elevator extends Component {
                 color={"red"}
                 clickAction={() => this.emergencyMessage()}
                 value={"EMERGENCY"}
+                baseButtonBorderRadius={"5%"}
               />
               <BaseButton
                 color={"green"}
                 clickAction={() => this.resetMessage()}
                 value={"RESET MESSAGES"}
+                baseButtonBorderRadius={"5%"}
               />
             </div>
           </div>

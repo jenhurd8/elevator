@@ -8,7 +8,9 @@ class BaseButton extends Component {
         variant="contained"
         size="small"
         style={{
-          borderRadius: "50%",
+          borderRadius: this.props.baseButtonBorderRadius
+            ? this.props.baseButtonBorderRadius
+            : "50%",
           padding: "20px",
           margin: "5px",
           border: "solid black 1px",
