@@ -14,10 +14,10 @@ class Elevator extends Component {
     };
   }
 
-  /* 
-  * Site used to clarify setInterval/clearinterval
-  * https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553
-  */
+  /*
+   * Site used to clarify setInterval/clearinterval
+   * https://medium.com/@650egor/react-30-day-challenge-day-1-simple-timer-df85d0867553
+   */
   interval() {
     this.timer = setInterval(this.floorHandler2.bind(this), 1000);
   }
@@ -68,6 +68,10 @@ class Elevator extends Component {
 
     return (
       <div className="elevator__parentContainer">
+        <div className="elevator__parentContainerTop">Top</div>
+        <div className="elevator__parentContainerBottom">Bottom</div>
+        <div className="elevator__parentContainerRight">Right</div>
+        <div className="elevator__parentContainerLeft">Left</div>
         <div className="elevator__centeredElevatorAndControlsBox">
           <div className="elevator__spaceOverElevator">
             <div id="elevator__currentFloor">

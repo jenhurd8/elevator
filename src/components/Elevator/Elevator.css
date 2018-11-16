@@ -5,15 +5,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-style: solid;
+  /* border-style: solid;
   border-width: 25vw;
   border-top-color: black;
   border-right-color: lightgrey;
   border-bottom-color: black;
-  border-left-color: lightgray;
+  border-left-color: lightgray; */
+}
+.elevator__parentContainerTop {
+  height: 100%;
+  width: 100%;
+  border-top: 15vh solid skyblue;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  z-index: -1;
 }
 .elevator__centeredElevatorAndControlsBox {
-  box-shadow: 0px 0px 50px 40px black;
+  /* box-shadow: 0px 0px 50px 40px black; */
 }
 h2 {
   color: red;
