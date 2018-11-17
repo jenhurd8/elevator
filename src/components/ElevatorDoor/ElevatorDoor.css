@@ -10,7 +10,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
 
 .elevatorDoor__elevator div {
   height: 55vh;
-  width: 60vw;
+  width: 40vw;
   overflow: hidden;
   position: relative;
   float: left;
@@ -46,8 +46,8 @@ https://codepen.io/samarkandiy/pen/EFyzB */
 }
 .elevatorDoor__doorClosed {
   height: 55vh;
-  width: 60vw;
-  border-left: solid 60vw gray;
+  width: 40vw;
+  border-left: solid 40vw gray;
 }
 .elevatorDoor__doorOpen {
   border-left: solid 0px gray;
@@ -71,7 +71,7 @@ https://codepen.io/samarkandiy/pen/EFyzB */
   }
   to {
     height: 55vh;
-    width: 60vw;
-    border-left: solid 60vw gray;
+    width: 40vw;
+    border-left: solid 55vw gray;
   }
 }

@@ -1,24 +1,20 @@
 .elevator__parentContainer {
-  height: 100vh;
-  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-style: solid;
-  border-width: 25vw;
+  box-sizing: content-box;
+  border-style: solid;
+  border-width: 15vw;
   border-top-color: black;
   border-right-color: lightgrey;
   border-bottom-color: black;
-  border-left-color: lightgray; */
-}
-.elevator__parentContainerTop {
-  height: 100%;
-  width: 100%;
-  border-top: 15vh solid skyblue;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  z-index: -1;
+  border-left-color: lightgray;
 }
 .elevator__centeredElevatorAndControlsBox {
   /* box-shadow: 0px 0px 50px 40px black; */
@@ -32,7 +28,7 @@ h3 {
 }
 .elevator__spaceOverElevator {
   height: 15vh;
-  width: 75vw;
+  width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
