@@ -52,7 +52,7 @@ class Elevator extends Component {
 
   emergencyMessage() {
     this.setState({
-      emergencyMessage: "Alert! The police have been notified, remain calm"
+      emergencyMessage: "The police have been notified, remain calm"
     });
   }
 
