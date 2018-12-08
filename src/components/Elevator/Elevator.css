@@ -16,34 +16,6 @@
   border-bottom-color: black;
   border-left-color: lightgray;
 }
-/* .elevator__parentContainerTop {
-  border-style: solid;
-  border-width: 15vh;
-  border-top-color: black;
-  position: fixed;
-  top: 0px;
-}
-.elevator__parentContainerBottom {
-  border-style: solid;
-  border-width: 15vh;
-  border-bottom-color: black;
-  position: absolute;
-  bottom: 0px;
-}
-.elevator__parentContainerLeft {
-  border-style: solid;
-  border-width: 15vw;
-  border-left-color: gray;
-  position: absolute;
-  left: 0px;
-}
-.elevator__parentContainerRight {
-  border-style: solid;
-  border-width: 15vw;
-  border-right-color: gray;
-  position: absolute;
-  right: 0px;
-} */
 
 .elevator__centeredElevatorAndControlsBox {
   /* box-shadow: 0px 0px 50px 40px black; */
