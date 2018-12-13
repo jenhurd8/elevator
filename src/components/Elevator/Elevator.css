@@ -11,10 +11,10 @@
   box-sizing: content-box;
   border-style: solid;
   border-width: 15vw;
-  border-top-color: black;
-  border-right-color: lightgrey;
-  border-bottom-color: brown;
-  border-left-color: lightgray;
+  border-top-color: white;
+  border-right-color: lightblue;
+  border-bottom-color: bisque;
+  border-left-color: lightblue;
 }
 
 .elevator__centeredElevatorAndControlsBox {
